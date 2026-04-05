@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LMS System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="message" class="message-box"></div>
+
+  <nav>
+    <h1>LMS System</h1>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#auth">Register</a>
+      <a href="#courses">Courses</a>
+      <a href="#payment-section">Payment</a>
+      <a href="#mycourses">My Courses</a>
+     
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="home-header">
+      <h2>Welcome to LMS System</h2>
+      <button id="logout-btn" style="display:none;">Logout</button>
+    </div>
+    <p>Register your courses now and start your learning journey!</p>
+    <img src="images/lms_image.jpg" alt="LMS Illustration" class="home-image" style="width:100%; max-width:600px; border-radius:10px;">
+  </section>
+  
+
+  <section id="auth">
+    <h2>Register / Login</h2>
+
+    <form id="register-form">
+      <h3>Register</h3>
+      <input type="text" id="reg-name" placeholder="Full Name" required>
+      <input type="email" id="reg-email" placeholder="Email" required>
+      <input type="password" id="reg-password" placeholder="Password" required>
+      <button type="submit">Register</button>
+    </form>
+
+    <form id="login-form">
+      <h3>Login</h3>
+      <input type="email" id="login-email" placeholder="Email" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <section id="courses">
+    <h2>Available Courses</h2>
+    <div id="courses-container"></div>
+  </section>
+
+  <section id="payment-section">
+    <h2>Payment</h2>
+    <div class="card">
+      <p>Course Fee: ₹499</p>
+      <button id="pay-btn">Pay Now</button>
+    </div>
+  </section>
+
+  <section id="mycourses">
+    <h2>My Courses</h2>
+    <div id="mycourses-container"></div>
+  </section>
+  <section id="payment-section">
+  <h2>Payment</h2>
+  <img src="images/payment_illustration.jpg" alt="Secure Payment" class="payment-image">
+  <p class="payment-message">
+    You're just one step away from unlocking your course!<br>
+    All payments are 100% secure and encrypted.
+  </p>
+  <span class="secure-note">🔒 Secure payment powered by EduPay</span>
+  <div class="payment-summary">
+    <strong>Course:</strong> Web Development Bootcamp<br>
+    <strong>Fee:</strong> ₹499
+  </div>
+  <div class="payment-icons">
+    <img src="images/visa.png" alt="Visa" />
+    <img src="images/mastercard.png" alt="Mastercard" />
+    <img src="images/upi.png" alt="UPI" />
+  </div>
+  <div class="card">
+    <button id="pay-btn">Pay Now</button>
+  </div>
+</section>
+
+
+  <footer>
+    &copy; 2025 LMS System
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", loadCourses);
+  </script>
+</body>
+</html>
